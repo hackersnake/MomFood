@@ -1,0 +1,156 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+#lg {
+  height: 54px;
+  width: auto;
+  max-height: 10%;
+}
+
+.navbar {
+  padding: 20px 10px; /* Adjust padding for better spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app {
+  width: 80%;
+  margin: auto;
+}
+
+.navbar-menu {
+  display: flex; /* Initially show menu for larger screens */
+  list-style: none;
+  gap: 20px;
+  color: #495574;
+  font-size: 18px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #fff4f2;
+}
+
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+
+  .navbar-right {
+    gap: 30px;
+  }
+
+  .navbar-right img {
+    width: 22px;
+  }
+
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 20px;
+  }
+
+  .navbar-right img {
+    width: 20px;
+  }
+
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+
+/* New media queries for even smaller screens */
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none; /* Hide menu items on screens smaller than 750px */
+  }
+
+  .navbar-right { /* Show only sign-in button on small screens */
+    display: flex;
+  }
+  #lg {
+    max-width: 60%;
+    height: auto;
+  }
+}
+
+/* Additional media query for even smaller screens (optional) */
+@media (max-width: 500px) {
+  .navbar .logo {
+    width: 80px; /* Adjust logo size for very small screens (optional) */
+  }
+}
+/* Navbar.css */
+
+/* Existing styles... */
+
+
+  
+  

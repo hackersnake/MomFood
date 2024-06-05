@@ -1,0 +1,40 @@
+.download{
+    margin: auto auto;
+    margin-top: 100px;
+    font-size: max(3vw,20px);
+    text-align: center;
+    font-weight: 500;
+}
+.download-platforms{
+    display: flex;
+    justify-content: center;
+    gap: max(2vw,10px);
+    margin-top: 40px;
+
+}
+.download-platforms img{
+    width: max(30 vw, 120px);
+    max-width: 180px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.download-platforms img:hover{
+    transform: scale(1.05s);
+
+}
+.download-platforms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows images to wrap to the next line if needed */
+    gap: 20px; /* Adjust spacing between images */
+  }
+  
+  .download-platforms img {
+    max-width: 70%;
+    height: auto;
+    flex: 1 1 auto; /* Allows images to grow and shrink as needed */
+    display: block;
+    margin: 0 auto;
+  }
+  

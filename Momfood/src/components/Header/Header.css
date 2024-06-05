@@ -1,0 +1,63 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat;
+    position: relative;
+  }
+  
+  .header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+  }
+  
+  .header-contents h2 {
+    font-weight: 500;
+    color: aliceblue;
+    font-size: max(4.5vw, 22px);
+  }
+  
+  .header-contents p {
+    color: aliceblue;
+    font-size: 1vw;
+  }
+  
+  .header-contents button {
+    color: #747474;
+    border: none;
+    font-weight: 500;
+    padding: 1vw 2.3vw; /* Corrected padding syntax */
+    background-color: aliceblue;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1050px) {
+    .header-contents {
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .header-contents {
+      max-width: 100%; /* Ensures content fits on smaller screens */
+      left: 0; /* Center content horizontally */
+    }
+  
+    .header-contents p {
+      display: none; /* Hide paragraph on very small screens */
+    }
+  
+    .header-contents button {
+      padding: 2vw 4vw; /* Corrected padding syntax */
+      font-size: 1.2rem; /* Adjust button size for better readability */
+    }
+  }
+  
