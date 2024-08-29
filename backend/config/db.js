@@ -1,5 +1,17 @@
-import mongoose from "mongoose";
+import mysql from 'mysql2/promise';
 
 export const connectDB = async () => {
-    await mongoose.connect('url').then(()=>console.log("DataBase Connected"));
-}
+    try {
+        const connection = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'password123',
+            database: 'my_database'
+        });
+
+        console.log("Database Connected");
+        return connection;
+    } catch (error) {
+        console.error("Error connecting to the database:", error.message);
+    }
+};
