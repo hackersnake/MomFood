@@ -1,26 +1,128 @@
-*{
+:root {
+  --primary-color: #ff4c24;
+  --primary-color-hover: #e63e1a;
+  --secondary-color: #2b3445;
+  --text-main: #2b3445;
+  --text-secondary: #6b7280;
+  --bg-main: #fcfcfc;
+  --bg-secondary: #f9fafb;
+  --accent-color: #fff4f2;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --gradient-main: linear-gradient(135deg, #fff0f0 0%, #fefefe 100%);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-main: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --bg-main: #111827;
+    --bg-secondary: #1f2937;
+    --glass-bg: rgba(31, 41, 55, 0.7);
+    --glass-border: rgba(55, 65, 81, 0.5);
+    --gradient-main: linear-gradient(135deg, #111827 0%, #171e2e 100%);
+  }
+}
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-body{
+
+body {
   min-height: 100vh;
+  color: var(--text-main);
+  background: var(--gradient-main);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
+  transition: var(--transition);
 }
-.app{
-  width: 80%;
+
+.app {
+  width: 90%;
+  max-width: 1440px;
   margin: auto;
+  padding-bottom: 50px;
 }
-@keyframes fadeIn{
-  0%{
+
+/* Glassmorphism Utilities */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.card {
+  background: var(--bg-main);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+button {
+  font-family: inherit;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Form inputs */
+input,
+select,
+textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  transition: var(--transition);
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-  }
-  100%{
-    opacity: 1;
+    transform: translateY(10px);
   }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
 }

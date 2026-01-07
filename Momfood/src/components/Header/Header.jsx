@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './Header.css'
+import { StoreContext } from '../../context/StoreContext'
 
 const Header = () => {
+  const { user, token } = useContext(StoreContext);
+  const [adding, setAdding] = useState(false);
+
   return (
     <div className='header'>
-        <div className="header-contents">
-            <h2>order your food</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor vel vitae nesciunt cupiditate corrupti sequi quaerat cumque quis perferendis numquam pariatur quidem iure neque natus ipsam ex inventore dicta est, quas praesentium explicabo harum doloremque eos perspiciatis. Eligendi, consequuntur! Labore.
-            </p>
-            <button>View Menu</button>
+      <div className="header-contents">
+        <h2>order your food</h2>
+        <p>Experience the warmth of home-style cooking, delivered right to your doorstep. Choose from a curated selection of wholesome meals prepared with love and the freshest ingredients.</p>
+        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+          <button>View Menu</button>
         </div>
+      </div>
     </div>
   )
 }

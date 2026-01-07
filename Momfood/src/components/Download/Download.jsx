@@ -5,13 +5,12 @@ import { assets } from '../../assets/assets'
 const Download = () => {
   return (
     <div className='download' id='download'>
-        <p> Download our application <br /> MomFood </p>
-        <div className="download-platforms">
-        <img src={assets.app_store} alt="" />
-            <img src={assets.play_store} alt="" />
-        </div>
-
-
+      <h2>Ready to order?</h2>
+      <p>Get the MomFood app for a faster and more seamless experience. Available now on your favorite platform.</p>
+      <div className="download-platforms">
+        <img src={assets.app_store} alt="App Store" />
+        <img src={assets.play_store} alt="Play Store" />
+      </div>
     </div>
   )
 }

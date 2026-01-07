@@ -1,0 +1,85 @@
+.offer-banner {
+    background: linear-gradient(135deg, var(--primary-color), #ff6b4a);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-xl);
+    margin: 3rem 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    animation: fadeIn 1s ease-out;
+}
+
+.offer-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.offer-banner .badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: var(--border-radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.offer-banner h3 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin: 0;
+}
+
+.offer-banner p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin: 0;
+}
+
+.offer-btn {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius-lg);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+}
+
+.offer-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: #f8f8f8;
+}
+
+/* Add some decorative bubbles */
+.offer-banner::before,
+.offer-banner::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.offer-banner::before {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -50px;
+}
+
+.offer-banner::after {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+    right: -25px;
+}
